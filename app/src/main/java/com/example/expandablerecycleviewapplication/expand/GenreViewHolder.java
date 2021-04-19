@@ -38,19 +38,14 @@ public class GenreViewHolder extends GroupViewHolder {
 
     public void setGenreTitle(ExpandableGroup genre) {
         if (genre instanceof Genre) {
-            genreName.setText(genre.getTitle());
+//            genreName.setText(genre.getTitle());
+
+            genreName.setText(((Genre) genre).getTtitle());
             icon.setBackgroundResource(((Genre) genre).getIconResId());
 
 
         }
-//        if (genre instanceof MultiCheckGenre) {
-//            genreName.setText(genre.getTitle());
-//            icon.setBackgroundResource(((MultiCheckGenre) genre).getIconResId());
-//        }
-//        if (genre instanceof SingleCheckGenre) {
-//            genreName.setText(genre.getTitle());
-//            icon.setBackgroundResource(((SingleCheckGenre) genre).getIconResId());
-//        }
+
     }
 
     @Override
@@ -64,18 +59,18 @@ public class GenreViewHolder extends GroupViewHolder {
     }
 
     private void animateExpand() {
-//        RotateAnimation rotate =
-//                new RotateAnimation(360, 180, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
-//        rotate.setDuration(300);
-//        rotate.setFillAfter(true);
-//        arrow.setAnimation(rotate);
+        RotateAnimation rotate =
+                new RotateAnimation(360, 180, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
+        rotate.setDuration(300);
+        rotate.setFillAfter(true);
+        arrow.setAnimation(rotate);
     }
 
     private void animateCollapse() {
-//        RotateAnimation rotate =
-//                new RotateAnimation(180, 360, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
-//        rotate.setDuration(300);
-//        rotate.setFillAfter(true);
-//        arrow.setAnimation(rotate);
+        RotateAnimation rotate =
+                new RotateAnimation(180, 360, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
+        rotate.setDuration(300);
+        rotate.setFillAfter(true);
+        arrow.setAnimation(rotate);
     }
 }

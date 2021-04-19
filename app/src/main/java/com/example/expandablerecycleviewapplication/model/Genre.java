@@ -7,14 +7,20 @@ import java.util.List;
 public class Genre extends ExpandableGroup<Artist> {
 
     private int iconResId;
+    private String ttitle;
 
     public Genre(String title, List<Artist> items, int iconResId) {
         super(title, items);
         this.iconResId = iconResId;
+        this.ttitle = title;
     }
 
     public int getIconResId() {
         return iconResId;
+    }
+
+    public String getTtitle() {
+        return ttitle;
     }
 
     @Override
@@ -24,7 +30,8 @@ public class Genre extends ExpandableGroup<Artist> {
 
         Genre genre = (Genre) o;
 
-        return getIconResId() == genre.getIconResId();
+//        return getIconResId() == genre.getIconResId();
+        return genre == genre;
 
     }
 
