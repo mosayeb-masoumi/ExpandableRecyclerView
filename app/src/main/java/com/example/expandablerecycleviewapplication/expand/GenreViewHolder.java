@@ -40,7 +40,8 @@ public class GenreViewHolder extends GroupViewHolder {
         if (genre instanceof Genre) {
 //            genreName.setText(genre.getTitle());
 
-            genreName.setText(((Genre) genre).getTtitle());
+//            genreName.setText(((Genre) genre).getTtitle());
+            genreName.setText(genre.getTitle());
             icon.setBackgroundResource(((Genre) genre).getIconResId());
 
 
